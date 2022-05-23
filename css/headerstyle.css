@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
+.rotate {
+  animation: rotation 8s infinite linear; 
+  margin-left: 20px !important;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+nav li{
+  position: relative;
+  display: table-cell;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-family: 'Sonsie One';
+  font-weight: bold;
+  transition: 0.2s ease color;
+}
+nav li:before,
+nav li:after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+.topbg {
+    background-color: #000000 !important;
+}
+.navright{
+  color: #ffffff !important;
+}
+
+.glow-on-hover {
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #00e5ff, #4800ff, #00e1ff, #ff00ee, #ff0095, #ff004c, #f700ff, #ff007b, #ff04d9);
+  position: absolute;
+  top: -2px;
+  right:2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(30px + 4px);
+  height: calc(30px + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: auto;
+  height: auto;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.marginav{
+  margin-left: 10px;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.f{
+    width: 33.333%;
+    display: table-cell;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Sonsie One', cursive;;
+    font-weight: bold;
+    transition: 0.2s ease color;
+  }
+
+nav li:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav li:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav li:nth-child(1):before {
+  background-color: yellow;
+}
+
+nav li:nth-child(1):after {
+  background-color: red;
+}
+
+nav li:nth-child(2):before {
+  background-color: #00e2ff;
+}
+
+nav li:nth-child(2):after {
+  background-color: #89ff00;
+}
+
+nav li:nth-child(3):before {
+  background-color: purple;
+}
+
+nav li:nth-child(3):after {
+  background-color: palevioletred;
+}
+
+nav li:hover {
+  color: #fff;
+}
+
+nav li:hover:before,
+nav li:hover:after {
+  transform: scale(1);
+}
+
+.section-heading {
+    display: flex;
+    align-items: top;
+  }
+  .section-heading::after,
+  .section-heading::before {
+    content: " ";
+    flex: 1;
+    height: 7px;
+    border-top: 20px solid rgb(102, 102, 103);
+    border-bottom: 15px solid rgb(162, 159, 159);
+    
+  }
+
+
