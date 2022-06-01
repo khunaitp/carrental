@@ -1,0 +1,18 @@
+CREATE TABLE `carrental_db`.`car` ( `id` INT NOT NULL AUTO_INCREMENT , `carcode` VARCHAR(3) NOT NULL , `brand` VARCHAR(30) NOT NULL , `model` VARCHAR(30) NOT NULL , `seat` INT NOT NULL , `car_status` SMALLINT(6) NOT NULL , `transmission` VARCHAR(20) NOT NULL , `rental_rate` DECIMAL((10,2)) NOT NULL , `car_pic` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `carrental_db`.`customer` ( `customer_id` INT NOT NULL AUTO_INCREMENT , `user_password` VARCHAR(255) NOT NULL , `first_name` VARCHAR(250) NOT NULL , `last_name` VARCHAR(250) NOT NULL , `email` VARCHAR(45) NOT NULL , `phone` VARCHAR(10) NOT NULL , PRIMARY KEY (`customer_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `carrental_db`.`rental` ( `rental_id` INT NOT NULL AUTO_INCREMENT , `cutomer_id` INT NOT NULL , `car_id` INT(11) NOT NULL , `amount` DOUBLE NOT NULL , `pickup_date` DATETIME NOT NULL , `drop_date` DATETIME NOT NULL , PRIMARY KEY (`rental_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `carrental_db`.`user_admin` ( `adminID` INT(10) NOT NULL , `admin_email` VARCHAR(255) NOT NULL , `admin_password` VARCHAR(255) NOT NULL ) ENGINE = InnoDB;
+
+INSERT INTO `user_admin` (`adminID`, `admin_email`, `admin_password`) VALUES ('1', 'admin@admin.com', 'admin')
+
+INSERT INTO `car` (`id`, `carcode`, `brand`, `model`, `seat`, `car_status`, `transmission`, `rental_rate`, `car_pic`) 
+VALUES (NULL, 'A01', 'Nisson', 'Almera', '5', '0', 'auto', '1000.00', 'A01.jpg'), (NULL, 'A02', 'Toyoto', 'Yaris', '5', '0', 'auto', '1000.00', 'A02.jpg'),
+(NULL, 'A03', 'Toyoto', 'vios', '5', '0', 'auto', '1300.00', 'A03.jpg'), (NULL, 'A04', 'Hondo', 'Jazz', '4', '0', 'auto', '900.00', 'A04.jpg'),
+(NULL, 'A05', 'Toyoto', 'Altis', '5', '0', 'auto', '1000.00', 'A05.jpg'), (NULL, 'B01', 'Toyoto', 'Vios', '5', '0', 'auto', '1500.00', 'B01.jpg'),
+(NULL, 'B02', 'Toyoto', 'Vios', '5', '0', 'auto', '1500.00', 'B02.jpg'), (NULL, 'B03', 'Mitsushi', 'Mirage', '5', '0', 'auto', '1100.00', 'B03.jpg'),
+(NULL, 'B04', 'Toyoto', 'Fortuner', '7', '0', 'auto', '3000.00', 'B04.jpg'), (NULL, 'B05', 'Toyoto', 'Fortuner', 7', '0', 'auto', '2900.00', 'B05.jpg'),
+
+
